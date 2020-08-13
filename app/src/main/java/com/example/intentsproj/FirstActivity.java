@@ -32,12 +32,12 @@ public class FirstActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Context context = getApplicationContext();
-                CharSequence text = "You just clicked the OK button";
+                CharSequence message = "You just clicked the OK button";
                 int duration = Toast.LENGTH_SHORT;
 
-                toast = Toast.makeText(context, text, duration);
+                toast = Toast.makeText(context, message, duration);
 
-                toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+                toast.setGravity(Gravity.TOP | Gravity.LEFT, 0, 0);
                 toast.show();
 
                 Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
