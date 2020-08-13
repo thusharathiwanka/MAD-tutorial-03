@@ -7,4 +7,7 @@
     <string name="plus">+</string>
     <string name="multi">*</string>
     <string name="divide">/</string>
+    <string name="hello_world">Hello world</string>
+    <string name="custom_toast_text">Android Custom Toast</string>
+    <string name="to">To</string>
 </resources>

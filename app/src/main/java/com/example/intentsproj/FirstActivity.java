@@ -5,12 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class FirstActivity extends AppCompatActivity {
@@ -31,11 +31,6 @@ public class FirstActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//              String value1 = editText1.getText().toString();
-//              String value2 = editText2.getText().toString();
-//              int numberValue1 = Integer.parseInt(value1);
-//              int numberValue2 = Integer.parseInt(value2);
-
                 int value1 = Integer.parseInt(editText1.getText().toString());
                 int value2 = Integer.parseInt(editText2.getText().toString());
 
@@ -54,5 +49,15 @@ public class FirstActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        LayoutInflater li = getLayoutInflater();
+
+        View layout = li.inflate(R.layout.custom_toast, (ViewGroup) findViewById(R.id.custom_toast_layout));
+
+        Toast toast = new Toast(getApplicationContext());
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        toast.setView(layout);
+        toast.show();
     }
 }
