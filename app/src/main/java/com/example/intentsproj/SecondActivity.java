@@ -11,8 +11,7 @@ import android.widget.TextView;
 
 public class SecondActivity extends AppCompatActivity {
     TextView textView;
-    EditText editText1;
-    EditText editText2;
+    EditText editText1, editText2;
     Button plusBtn, minusBtn, multiBtn, divideBtn;
     int sum;
 
