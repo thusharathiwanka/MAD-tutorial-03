@@ -41,7 +41,7 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 sum = value1 + value2;
-                textView.setText(String.valueOf(sum));
+                textView.setText(value1 + " + " + value2 + " = " + sum);
             }
         });
 
@@ -49,7 +49,7 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 sum = value1 - value2;
-                textView.setText(String.valueOf(sum));
+                textView.setText(value1 + " - " + value2 + " = " + sum);
             }
         });
 
@@ -57,7 +57,7 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 sum = value1 * value2;
-                textView.setText(String.valueOf(sum));
+                textView.setText(value1 + " * " + value2 + " = " + sum);
             }
         });
 
@@ -65,7 +65,7 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 sum = value1 / value2;
-                textView.setText(String.valueOf(sum));
+                textView.setText(value1 + " / " + value2 + " = " + sum);
             }
         });
     }
